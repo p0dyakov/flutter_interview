@@ -1087,8 +1087,8 @@ O(1). Такая скорость достигается за счёт того,
 ### Repository
 `Repository` - coming soon
 
-# Алгоритмы
-
+# Алгоритмы  
+[Подробнее](https://github.com/TheAlgorithms/Dart)  
 ### BinarySearch
 
     binarySearch(List  list,  int  value,  int  min,  int  max) {
