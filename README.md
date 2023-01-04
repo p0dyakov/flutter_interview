@@ -305,6 +305,23 @@ O(1)
 - `Physics-based animation`. Имитируют реальное поведение
 
 ---
+### Что такое Tween?
+`Tween` - это объект, который описывает между какими значениями анимируется виджет и отвечает за вычисление текущего значения анимации
+	
+---
+### Tween анимации
+- `Implicit Animations` - это набор `Implicitly Animated Widgets`, которые анимируются самостоятельно при их перестройке с новыми аргументами. (`AnimatedAlign`, `AnimatedContainer`, `AnimatedPadding` и т.д.)
+- `Explicit Animations` -  это набор элементов управления анимационными эффектами. Предоставляют куда больше контроля над анимацией, чем `Implicit Animations`. Для использования необходимо подмешать к стейту вашего виджета `SingleTickerProviderStateMixin` / `TickerProviderStateMixin`, создать `AnimationController` и зависящие от него `Animation`, передать анимацию в `Transition Widget` (`AlignTransition`, `DecoratedBoxTransition`, `SizeTransition` и т.д.) 
+SingleTickerProviderStateMixin/TickerProviderStateMixin создает Ticker  
+Ticker вызывает callback на каждый фрейм анимации  
+AnimationController пределяет все фреймы анимации - управляет анимацией (forward, reverse, repeat, stop, reset и т.д.)  
+Animation отдает текущее значение анимации, а также позволяет подписаться на обновления значения/статуса анимации  
+	
+---
+### Что такое CustomPaint?
+`CustomPaint` - это класс, создает «холст» для рисования. В методе `paint` в качестве аргументов поступает `canvas`, который позволяет рисовать различные фигуры
+
+---
 ### Что такое GlobalKeys?
 `GlobalKeys` - это ключи, которые предоставляют доступ к виджетам. Для виджетов с отслеживанием состояния глобальные ключи также предоставляют доступ к состоянию. Позволяют виджетам менять родителей в любом месте приложения без потери состояния. Должны быть уникальны для всего приложения.
 
