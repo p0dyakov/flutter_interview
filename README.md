@@ -1009,11 +1009,14 @@ O(1). Такая скорость достигается за счёт того,
 [Подробнее](https://habr.com/ru/company/rshb/blog/668600/)
 
 ---
-### Embedder Protocol, that forces all embedders to have 4 threads
+### Task Runners во Flutter
+![image](https://user-images.githubusercontent.com/80569772/211004726-1eeef86f-cebf-41de-8bb3-a8485257565f.png)  
 - `Platform Task Runner`
 - `UI Task Runner`
 - `Raster Task Runner`
 - `IO Task Runner`
+	
+[Подробнее](https://www.programmersought.com/article/81813680395/)
 
 ## Разное
 ### Что такое тестирование?
