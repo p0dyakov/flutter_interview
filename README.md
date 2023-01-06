@@ -1135,10 +1135,6 @@ O(1). Такая скорость достигается за счёт того,
 
 [Подробнее](https://refactoring.guru/ru/design-patterns/catalog)  
 
----
-### Repository
-`Repository` - coming soon
-
 # Алгоритмы  
 [Подробнее](https://github.com/TheAlgorithms/Dart)  
 ### BinarySearch
