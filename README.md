@@ -1129,21 +1129,3 @@ O(1). Такая скорость достигается за счёт того,
 - Visitor (Посетитель). Поведенческий паттерн проектирования, который позволяет добавлять в программу новые операции, не изменяя классы объектов, над которыми эти операции могут выполняться.
 
 [Подробнее](https://refactoring.guru/ru/design-patterns/catalog)  
-
-# Алгоритмы  
-[Подробнее](https://github.com/TheAlgorithms/Dart)  
-### BinarySearch
-
-    binarySearch(List  list,  int  value,  int  min,  int  max) {
-        if (min  >  max) {
-	        return  null;
-        }
-	    final  mid  = (max  +  min) ~/  2;
-	    if (value  <  list[mid]) {
-	        return  binarySearch(list,  value,  min,  mid  -  1);
-	    } else  if (value  >  list[mid]) {
-		    return  binarySearch(list,  value,  mid  +  1,  max);
-	    } else {
-		    return  mid;
-	    }
-    }
