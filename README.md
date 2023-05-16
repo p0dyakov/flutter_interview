@@ -343,24 +343,6 @@
 `RenderObject` - это мутабельный объект дерева визуализации. У него есть родительский объект, а также поле с данными, которое родительский объект использует для хранения специфичной информации, касающейся самого этого объекта, например, его позицию. Данный объект отвечает за  отрисовку, учёт размеров и ограничений, прослушивание и обработку нажатий. При необходимости перерисовки помечается как dirty. Перерисовывается, используя свой метод layer
 
 ---
-<!-- TOC --><a name="--2"></a>
-### Виды элементов
-![image](https://user-images.githubusercontent.com/80569772/205450564-87d6c2d0-a994-4d1d-bbaa-2c8f7fb07385.png)
-`ComponentElement` - компоновочный элемент, который явно не содержит логику рисования/отображения. Есть метод build(), который возвращает виджет. Образуется только при создании виджетов StatelessWidget, StatefulWidget, InheritedWidget (ProxyWidget).
-- `ProxyElement`
-- `StatelessElement`
-- `StatefulElement`
-
-`RenderObjectElement` - отображающий элемент, явно участвующий в рисовании компонентов на экране. Содержит renderObject и наследуется от класса Element. Образуется при создании виджетов Padding, Column, Row, Center и др.
-- `LeafRenderObjectElement`
-- `ListWheelElement`
-- `MultiChildRenderObjectElement`
-- `RootRenderObjectElement`
-- `SingleChildRenderObjectElement`
-- `SliverMultiBoxAdaptorElement`
-- `SlottedRenderObjectElement`
-
----
 <!-- TOC --><a name="--3"></a>
 ### Виды виджетов
 `Proxy` - это виджеты, которые хранят некоторую информацию и делают её доступной для потомков. Эти виджеты не принимают непосредственного участия в формировании пользовательского интерфейса, но используются для получения информации, которую они могут предоставить.
@@ -381,11 +363,29 @@
 - `Scaffold`
 - `Text`
 - `GestureDetector`
-- `Container`
+- `Container`	
+
+---
+<!-- TOC --><a name="--2"></a>
+### Виды элементов
+![image](https://user-images.githubusercontent.com/80569772/205450564-87d6c2d0-a994-4d1d-bbaa-2c8f7fb07385.png)
+`ComponentElement` - компоновочный элемент, который явно не содержит логику рисования/отображения. Есть метод build(), который возвращает виджет. Образуется только при создании виджетов StatelessWidget, StatefulWidget, InheritedWidget (ProxyWidget).
+- `ProxyElement`
+- `StatelessElement`
+- `StatefulElement`
+
+`RenderObjectElement` - отображающий элемент, явно участвующий в рисовании компонентов на экране. Содержит renderObject и наследуется от класса Element. Образуется при создании виджетов Padding, Column, Row, Center и др.
+- `LeafRenderObjectElement`
+- `ListWheelElement`
+- `MultiChildRenderObjectElement`
+- `RootRenderObjectElement`
+- `SingleChildRenderObjectElement`
+- `SliverMultiBoxAdaptorElement`
+- `SlottedRenderObjectElement`
 
 ---
 <!-- TOC --><a name="-element-"></a>
-### Жизненный цикл Element-а виджета
+### Жизненный цикл Element-а
 1. Элемент создаётся посредством вызова метода Widget.createElement и конфигурируется экземпляром виджета, у которого был вызван метод.
 2. С помощью метода mount созданный элемент добавляется в заданную позицию родительского элемента. При вызове данного метода также ассоциируются дочерние виджеты и элементам сопоставляются объекты дерева рендеринга.
 3. Виджет становится активным и должен появиться на экране.
