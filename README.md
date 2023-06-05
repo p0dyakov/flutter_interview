@@ -30,7 +30,7 @@
   * [Аннотации](#-2)
 - [Flutter](#flutter)
   * [Stateless и Stateful виджеты](#stateless-stateful-)
-  * [Жизненный цикл Stateful-виджета](#-stateful-)
+  * [Жизненный цикл Stateful виджета](#-stateful-)
   * [BuildContext](#buildcontext)
   * [InheritedWidget](#inheritedwidget)
   * [Деревья](#-3)
@@ -44,17 +44,17 @@
   * [LocalKeys](#localkeys)
   * [Устройство Flutter под капотом ](#-flutter-)
   * [Модель выполнения во Flutter](#-flutter)
-  * [Режимы сборки](#--6)
-  * [Package и Plugin](#package-plugin)
-  * [FFI Plugin](#ffi-plugin)
-  * [Этапы анимации](#--7)
-  * [Виды анимаций](#--8)
-  * [Что такое Tween](#-tween)
-  * [Tween анимации](#tween-)
   * [CustomPaint](#custompaint)
   * [WidgetsFlutterBinding](#widgetsflutterbinding)
   * [Bindings](#bindings)
-  * [Каналы платформы](#--9)
+  * [Каналы платформы](#--6)
+  * [Режимы сборки](#--7)
+  * [Package и Plugin](#package-plugin)
+  * [FFI Plugin](#ffi-plugin)
+  * [Этапы анимации](#--8)
+  * [Виды анимаций](#--9)
+  * [Что такое Tween](#-tween)
+  * [Tween анимации](#tween-)
   * [Построение кадра](#--10)
   * [Расчёт макета](#--11)
   * [BuildOwner](#buildowner)
@@ -275,7 +275,7 @@
 
 ---
 <!-- TOC --><a name="-stateful-"></a>
-### Жизненный цикл Stateful-виджета
+### Жизненный цикл Stateful виджета
 1.  `createState()` вызывается единожды и создает изменяемое состояние для этого виджета в заданном месте в дереве
 2.  `mounted is true`
 3.  `initState()` вызывается единожды при инициализации
@@ -423,55 +423,7 @@
 4. Запускается Event Loop (цикл событий). Он управлет порядком исполнения вашего
 кода, в зависимости от содержимого двух очередей: MicroTask и Event. Представляет собой "бесконечный" цикл.  
 5. Event Loop с определённой частотой проверяет MicroTask и Event. Если есть что-то код в MicroTask, то оно выполняется перед очередью Event.
-	
----
-<!-- TOC --><a name="--6"></a>
-### Режимы сборки
-- `Debug` (`JIT`) для разработки
-- `Release` (`AOT`) для публикации приложения
-- `Profile` (`AOT`) для анализа производительности 
-	
----
-<!-- TOC --><a name="package-plugin"></a>
-### Package и Plugin
-- `Package` написан только на dart
-- `Plugin` использует dart и специфичный код для платформы
 
----
-<!-- TOC --><a name="ffi-plugin"></a>
-### FFI Plugin
-- `FFI Plugin` - плагин, в котором для написания специфичных платформенных частей используется [Dart FFI](https://dart.dev/guides/libraries/c-interop). Позволяет запустить код на C / C++
-
----
-<!-- TOC --><a name="--7"></a>
-### Этапы анимации
-- `Ticker` просит `SchedulerBinding` зарегистрировать обратный вызов и сообщить `Flutter Engine`, что надо разбудить его, когда появится новый обратный вызов. 
-- Когда `Flutter Engine` готов, он вызывает `SchedulerBinding` через запрос `onBeginFrame`. 
-- `SchedulerBinding` обращается к списку обратных вызовов `ticker` и выполняет каждый из них.
-- Каждый `tick` перехватывается "заинтересованным" контроллером для его обработки. 
-- Если анимация завершена, то `ticker` "отключён", иначе `ticker` запрашивает `SchedulerBinding` для планирования нового обратного вызова. 
-- ...
-	
----
-<!-- TOC --><a name="--8"></a>
-### Виды анимаций
-- `Tween animation`. Начало, конец, время, скорость заранее определенно  
-- `Physics-based animation`. Имитируют реальное поведение
-
----
-<!-- TOC --><a name="-tween"></a>
-### Что такое Tween
-`Tween` - это объект, который описывает между какими значениями анимируется виджет и отвечает за вычисление текущего значения анимации
-	
----
-<!-- TOC --><a name="tween-"></a>
-### Tween анимации
-- `Implicit Animations` - это набор `Implicitly Animated Widgets`, которые анимируются самостоятельно при их перестройке с новыми аргументами. (`AnimatedAlign`, `AnimatedContainer`, `AnimatedPadding` и т.д.)
-- `Explicit Animations` -  это набор элементов управления анимационными эффектами. Предоставляют куда больше контроля над анимацией, чем `Implicit Animations`. Для использования необходимо подмешать к стейту вашего виджета `SingleTickerProviderStateMixin` / `TickerProviderStateMixin`, создать `AnimationController` и зависящие от него `Animation`, передать анимацию в `Transition Widget` (`AlignTransition`, `DecoratedBoxTransition`, `SizeTransition` и т.д.) 
-`SingleTickerProviderStateMixin` / `TickerProviderStateMixin` создает `Ticker`  
-`Ticker` вызывает callback на каждый фрейм анимации  
-`AnimationController` пределяет все фреймы анимации - управляет анимацией (forward, reverse, repeat, stop, reset и т.д.)  
-`Animation` отдает текущее значение анимации, а также позволяет подписаться на обновления значения/статуса анимации  	
 
 ---
 <!-- TOC --><a name="custompaint"></a>
@@ -515,7 +467,7 @@
 `GestureBinding` отвечает за работу с подсистемой жестов.
 
 ---
-<!-- TOC --><a name="--9"></a>
+<!-- TOC --><a name="--6"></a>
 ### Каналы платформы
 
 ![image](https://user-images.githubusercontent.com/80569772/202891758-b7cc7db9-3b4c-4ce3-9f91-37f9a1a614a1.png)
@@ -537,6 +489,55 @@
 `Каналы событий` — это специализированные каналы платформы, предназначенные для использования в случае представления событий платформы Flutter в виде потока Dart. Работает как обычный `Stream`
 
 [Подробнее](https://habr.com/ru/post/666272/)
+	
+---
+<!-- TOC --><a name="--7"></a>
+### Режимы сборки
+- `Debug` (`JIT`) для разработки
+- `Release` (`AOT`) для публикации приложения
+- `Profile` (`AOT`) для анализа производительности 
+	
+---
+<!-- TOC --><a name="package-plugin"></a>
+### Package и Plugin
+- `Package` написан только на dart
+- `Plugin` использует dart и специфичный код для платформы
+
+---
+<!-- TOC --><a name="ffi-plugin"></a>
+### FFI Plugin
+- `FFI Plugin` - плагин, в котором для написания специфичных платформенных частей используется [Dart FFI](https://dart.dev/guides/libraries/c-interop). Позволяет запустить код на C / C++
+
+---
+<!-- TOC --><a name="--8"></a>
+### Этапы анимации
+- `Ticker` просит `SchedulerBinding` зарегистрировать обратный вызов и сообщить `Flutter Engine`, что надо разбудить его, когда появится новый обратный вызов. 
+- Когда `Flutter Engine` готов, он вызывает `SchedulerBinding` через запрос `onBeginFrame`. 
+- `SchedulerBinding` обращается к списку обратных вызовов `ticker` и выполняет каждый из них.
+- Каждый `tick` перехватывается "заинтересованным" контроллером для его обработки. 
+- Если анимация завершена, то `ticker` "отключён", иначе `ticker` запрашивает `SchedulerBinding` для планирования нового обратного вызова. 
+- ...
+	
+---
+<!-- TOC --><a name="--9"></a>
+### Виды анимаций
+- `Tween animation`. Начало, конец, время, скорость заранее определенно  
+- `Physics-based animation`. Имитируют реальное поведение
+
+---
+<!-- TOC --><a name="-tween"></a>
+### Что такое Tween
+`Tween` - это объект, который описывает между какими значениями анимируется виджет и отвечает за вычисление текущего значения анимации
+	
+---
+<!-- TOC --><a name="tween-"></a>
+### Tween анимации
+- `Implicit Animations` - это набор `Implicitly Animated Widgets`, которые анимируются самостоятельно при их перестройке с новыми аргументами. (`AnimatedAlign`, `AnimatedContainer`, `AnimatedPadding` и т.д.)
+- `Explicit Animations` -  это набор элементов управления анимационными эффектами. Предоставляют куда больше контроля над анимацией, чем `Implicit Animations`. Для использования необходимо подмешать к стейту вашего виджета `SingleTickerProviderStateMixin` / `TickerProviderStateMixin`, создать `AnimationController` и зависящие от него `Animation`, передать анимацию в `Transition Widget` (`AlignTransition`, `DecoratedBoxTransition`, `SizeTransition` и т.д.) 
+`SingleTickerProviderStateMixin` / `TickerProviderStateMixin` создает `Ticker`  
+`Ticker` вызывает callback на каждый фрейм анимации  
+`AnimationController` пределяет все фреймы анимации - управляет анимацией (forward, reverse, repeat, stop, reset и т.д.)  
+`Animation` отдает текущее значение анимации, а также позволяет подписаться на обновления значения/статуса анимации  	
 
 ---
 <!-- TOC --><a name="--10"></a>
