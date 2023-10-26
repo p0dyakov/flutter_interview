@@ -5,86 +5,87 @@
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [Общие](#)
-  * [ООП](#-1)
-  * [SOLID](#solid)
-  * [Git Flow](#git-flow)
-  * [Структуры данных](#-)
-  * [Императивное и декларативное программирование](#--1)
-  * [Стек и куча](#--2)
-  * [DAO, DTO, VO, BO](#dao-dto-vo-bo)
-  * [DI и Service Locator](#di-service-locator)
+   * [ООП](#-1)
+   * [SOLID](#solid)
+   * [Git Flow](#git-flow)
+   * [Структуры данных](#-)
+   * [Императивное и декларативное программирование](#--1)
+   * [Стек и куча](#--2)
+   * [DAO, DTO, VO, BO](#dao-dto-vo-bo)
+   * [DI и Service Locator](#di-service-locator)
 - [Dart](#dart)
-  * [final и const](#final-const)
-  * [JIT и AOT](#jit-aot)
-  * [Hot Restart и Hot Reload](#hot-restart-hot-reload)
-  * [HashCode](#hashcode)
-  * [Extension](#extension)
-  * [Mixin](#mixin)
-  * [Sound Null Safety](#sound-null-safety)
-  * [Late](#late)
-  * [Generics](#generics)
-  * [Dart VM](#dart-vm)
-  * [Правила именования](#--3)
-  * [Never](#never)
-  * [Covariant](#covariant)
-  * [Аннотации](#-2)
+   * [final и const](#final-const)
+   * [JIT и AOT](#jit-aot)
+   * [Hot Restart и Hot Reload](#hot-restart-hot-reload)
+   * [HashCode](#hashcode)
+   * [Extension](#extension)
+   * [Mixin](#mixin)
+   * [Sound Null Safety](#sound-null-safety)
+   * [Late](#late)
+   * [Generics](#generics)
+   * [Dart VM](#dart-vm)
+   * [Зоны](#-2)
+   * [Правила именования](#--3)
+   * [Never](#never)
+   * [Covariant](#covariant)
+   * [Аннотации](#-3)
 - [Flutter](#flutter)
-  * [Stateless и Stateful виджеты](#stateless-stateful-)
-  * [Жизненный цикл Stateful виджета](#-stateful-)
-  * [BuildContext](#buildcontext)
-  * [InheritedWidget](#inheritedwidget)
-  * [Деревья](#-3)
-  * [Widget](#widget)
-  * [Element](#element)
-  * [RenderObject](#renderobject)
-  * [Виды виджетов](#--4)
-  * [Виды элементов](#--5)
-  * [Жизненный цикл Element-а](#-element-)
-  * [GlobalKeys](#globalkeys)
-  * [LocalKeys](#localkeys)
-  * [Устройство Flutter под капотом ](#-flutter-)
-  * [Модель выполнения во Flutter](#-flutter)
-  * [CustomPaint](#custompaint)
-  * [WidgetsFlutterBinding](#widgetsflutterbinding)
-  * [Bindings](#bindings)
-  * [Каналы платформы](#--6)
-  * [Режимы сборки](#--7)
-  * [Package и Plugin](#package-plugin)
-  * [FFI Plugin](#ffi-plugin)
-  * [Этапы анимации](#--8)
-  * [Виды анимаций](#--9)
-  * [Что такое Tween](#-tween)
-  * [Tween анимации](#tween-)
-  * [Построение кадра](#--10)
-  * [Расчёт макета](#--11)
-  * [BuildOwner](#buildowner)
-  * [PipelineOwner](#pipelineowner)
-  * [Garbage Collector](#garbage-collector)
-  * [Task Runners](#task-runners)
-- [Асинхронность](#-4)
-  * [Future](#future)
-  * [Конструкторы Future](#-future)
-  * [Await под капотом](#await-)
-  * [Event Loop](#event-loop)
-  * [Completer](#completer)
-  * [Stream](#stream)
-  * [Генераторы (sync* / async*)  ](#-sync-async)
-- [Многопоточность](#-5)
-  * [Многопоточность в Dart и Flutter ](#-dart-flutter)
-  * [Isolate](#isolate)
-  * [Compute](#compute)
-  * [Проблемы многопоточности](#--12)
-- [Архитектура](#-6)
-  * [Архитектура](#-7)
-  * [Чистая архитектура](#--13)
-  * [Управление состоянием](#--14)
-  * [Dependency Injection  ](#dependency-injection)
-  * [Архитектурные патерны  ](#--15)
-  * [Способы осуществления навигации](#--16)
-  * [Базы данных](#--17)
-- [Тестирование](#-8)
-  * [Виды тестов](#--18)
-  * [TDD](#tdd)
+   * [Stateless и Stateful виджеты](#stateless-stateful-)
+   * [Жизненный цикл Stateful виджета](#-stateful-)
+   * [BuildContext](#buildcontext)
+   * [InheritedWidget](#inheritedwidget)
+   * [Деревья](#-4)
+   * [Widget](#widget)
+   * [Element](#element)
+   * [RenderObject](#renderobject)
+   * [Виды виджетов](#--4)
+   * [Виды элементов](#--5)
+   * [Жизненный цикл Element-а](#-element-)
+   * [GlobalKeys](#globalkeys)
+   * [LocalKeys](#localkeys)
+   * [Устройство Flutter под капотом ](#-flutter-)
+   * [Модель выполнения во Flutter](#-flutter)
+   * [CustomPaint](#custompaint)
+   * [WidgetsFlutterBinding](#widgetsflutterbinding)
+   * [Bindings](#bindings)
+   * [Каналы платформы](#--6)
+   * [Режимы сборки](#--7)
+   * [Package и Plugin](#package-plugin)
+   * [FFI Plugin](#ffi-plugin)
+   * [Этапы анимации](#--8)
+   * [Виды анимаций](#--9)
+   * [Что такое Tween](#-tween)
+   * [Tween анимации](#tween-)
+   * [Построение кадра](#--10)
+   * [Расчёт макета](#--11)
+   * [BuildOwner](#buildowner)
+   * [PipelineOwner](#pipelineowner)
+   * [Garbage Collector](#garbage-collector)
+   * [Task Runners](#task-runners)
+- [Асинхронность](#-5)
+   * [Future](#future)
+   * [Конструкторы Future](#-future)
+   * [Await под капотом](#await-)
+   * [Event Loop](#event-loop)
+   * [Completer](#completer)
+   * [Stream](#stream)
+   * [Генераторы (sync* / async*)  ](#-sync-async)
+- [Многопоточность](#-6)
+   * [Многопоточность в Dart и Flutter ](#-dart-flutter)
+   * [Isolate](#isolate)
+   * [Compute](#compute)
+   * [Проблемы многопоточности](#--12)
+- [Архитектура](#-7)
+   * [Архитектура](#-8)
+   * [Чистая архитектура](#--13)
+   * [Управление состоянием](#--14)
+   * [Dependency Injection  ](#dependency-injection)
+   * [Архитектурные патерны  ](#--15)
+   * [Способы осуществления навигации](#--16)
+   * [Базы данных](#--17)
+- [Тестирование](#-9)
+   * [Виды тестов](#--18)
+   * [TDD](#tdd)
 - [Паттерны разработки](#--19)
 
 <!-- TOC end -->
@@ -243,6 +244,16 @@
 - `Симулятор ARM архитектуры`
 
 ---
+<!-- TOC --><a name="-2"></a>
+### Зоны
+Зона - это механизм, который позволяет управлять и обрабатывать ошибки и другие события, происходящие в определенных областях кода.
+
+1. Защита вашего приложения от завершения из-за необработанного исключения
+2. Ассоциирование данных, известных как `zone-local values`, с отдельными зонами
+3. Переопределение ограниченного набора методов, таких как print() и scheduleMicrotask(), внутри части или всего кода
+4. Выполнение операции каждый раз, когда код входит или выходит из зоны. Эти операции могут включать в себя запуск или остановку таймера или сохранение stacktrace-а
+
+---
 <!-- TOC --><a name="--3"></a>
 ### Правила именования
 - Переменные и константы - `lowerCamelCase`
@@ -260,7 +271,7 @@
 `Covariant` - это ключевое слово в dart, которое указывает на то, что тип возвращаемого значения может быть изменен на более узкий тип в подклассе.
 
 ---
-<!-- TOC --><a name="-2"></a>
+<!-- TOC --><a name="-3"></a>
 ### Аннотации
 `Аннотации` — это синтаксические метаданные, которые могут быть добавлены к коду. Другими словами, это возможность добавить дополнительную информацию к любому компоненту кода, например, к классу или методу. Аннотации всегда начинаются с символа `@` (`@override`, `@required`). Любой класс может служить аннотацией, если в нем определен const конструктор
 
@@ -305,7 +316,7 @@
 *Сложность у операции получения InheritedWidget - O(1). Такая скорость достигается за счёт того, что Inherited виджеты хранятся в виде мапы в `Element`-е*
 
 ---
-<!-- TOC --><a name="-3"></a>
+<!-- TOC --><a name="-4"></a>
 ### Деревья
 ![](https://docs.flutter.dev/assets/images/docs/arch-overview/trees.png)
 - `Widget Tree` состоит из `Widget`, которые используются для описания пользовательского интерфейса
@@ -603,7 +614,7 @@
 	
 [Подробнее](https://www.programmersought.com/article/81813680395/)	
 
-<!-- TOC --><a name="-4"></a>
+<!-- TOC --><a name="-5"></a>
 ## Асинхронность
 <!-- TOC --><a name="future"></a>
 ### Future
@@ -660,7 +671,7 @@
 - *sync** - это синхронный генератор. Возвращает `Iterable`
 - *async** - это aсинхронный генератор. Возвращает `Stream`
 	
-<!-- TOC --><a name="-5"></a>
+<!-- TOC --><a name="-6"></a>
 ## Многопоточность
 <!-- TOC --><a name="-dart-flutter"></a>
 ### Многопоточность в Dart и Flutter 
@@ -685,9 +696,9 @@
 - `Lock Contention` — основное время потока проводится не в исполнении полезной работы, а в ожидании блокированного другим потоком ресурса
 - `Live Lock` — поток захватывает ресурс, но после того, как убедится, что завершить работу не может, освобождает ресурс, аннулируя результаты
 
-<!-- TOC --><a name="-6"></a>
-## Архитектура
 <!-- TOC --><a name="-7"></a>
+## Архитектура
+<!-- TOC --><a name="-8"></a>
 ### Архитектура
 Архитектура - это набор решений по организации программы. Таких, как деление программы на слои, построение связей между ними, управление состоянием, связь с UI. Хорошая архитектура делает слои в приложении слабо связанными, что упрощает внесение изменений, повышает тестируемость кода, упрощает систему  
 
@@ -931,7 +942,7 @@
 - Большой объём данных
 - Хранение сложно структурированных данных
 
-<!-- TOC --><a name="-8"></a>
+<!-- TOC --><a name="-9"></a>
 ## Тестирование
 
 <!-- TOC --><a name="--18"></a>
