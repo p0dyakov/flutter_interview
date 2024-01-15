@@ -1,5 +1,5 @@
 ![image](https://user-images.githubusercontent.com/80569772/196411618-aa9aea7f-9c8e-4a30-a79d-9f71cb78980a.png)  
-Подготовка к интервью на позицию flutter - разработчика. В данном документе есть неточности и упущения, поэтому пулл реквесты приветствуются  
+Подготовка к интервью на позицию flutter - разработчика. В данном документе есть неточности и упущения, поэтому пул реквесты приветствуются  
 Другое: [flutter_roadmap](https://github.com/p0dyakov/flutter_roadmap), [flutter_acrticles](https://github.com/p0dyakov/flutter_articles)
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
