@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/80569772/196411618-aa9aea7f-9c8e-4a30-a79d-9f71cb78980a.png)  
+![Flutter Interview](https://github.com/p0dyakov/flutter_interview/assets/80569772/68dccc7f-b4f2-4eca-932a-8f9fe5559b5f)
 Подготовка к интервью на позицию flutter - разработчика. В данном документе есть неточности и упущения, поэтому пул реквесты приветствуются  
 Другое: [flutter_roadmap](https://github.com/p0dyakov/flutter_roadmap), [flutter_acrticles](https://github.com/p0dyakov/flutter_articles)
 
