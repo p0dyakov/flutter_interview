@@ -1,4 +1,6 @@
 ![Flutter Interview](https://github.com/p0dyakov/flutter_interview/assets/80569772/68dccc7f-b4f2-4eca-932a-8f9fe5559b5f)
+[ENGLISH VERSION](https://github.com/p0dyakov/flutter_interview/blob/main/README_EN.md)
+
 **Репозитории:** [Flutter Interview](https://github.com/p0dyakov/flutter_interview), [Flutter Roadmap](https://github.com/p0dyakov/flutter_roadmap), [Flutter Acrticles](https://github.com/p0dyakov/flutter_articles), [Flutter Best Packages](https://github.com/p0dyakov/flutter_best_packages), [Flutter Tools](https://github.com/p0dyakov/flutter_tools)  
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
