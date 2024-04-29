@@ -124,21 +124,21 @@ The modules of the upper levels should not depend on the modules of the lower le
 <!-- TOC --><a name="git-flow"></a>
 ### Git Flow
 Feature
-1. `The beginning of a new feature'. Creating a new branch `feature/future_name` from `develop`
-2. `Completion of the feature'. Merge `feature/future_name` into `develop`, delete `feature/future_name`
-3. `The beginning of the release'. Creating a release branch `release/vX.X.X`, responding from the `develop` branch
-4. `Release Completion'. The release branch `release/vX.X.X` merges into `master`, the release is tagged, the release branch merges into `develop`, the release branch is deleted 
+1. `The beginning of a new feature`. Creating a new branch `feature/future_name` from `develop`
+2. `Completion of the feature`. Merge `feature/future_name` into `develop`, delete `feature/future_name`
+3. `The beginning of the release`. Creating a release branch `release/vX.X.X`, responding from the `develop` branch
+4. `Release Completion`. The release branch `release/vX.X.X` merges into `master`, the release is tagged, the release branch merges into `develop`, the release branch is deleted 
 
 Fix
-1. `The beginning of correction'. From the `master` branch, create a `hotfix/fix_name`
-2. `Completion of correction'. From the `hotfix/fix_name` branch, the fix is merged into `develop` and `master`, the fix branch is deleted 
+1. `The beginning of correction`. From the `master` branch, create a `hotfix/fix_name`
+2. `Completion of correction`. From the `hotfix/fix_name` branch, the fix is merged into `develop` and `master`, the fix branch is deleted 
 
 ---
 <!-- TOC --><a name="data-structures"></a>
 ### Data structures
 Data structures are needed to store data in a suitable way    
 - `Arrays`  
-- `Stacks' (*LIFO* - last in, first out)
+- `Stacks` (*LIFO* - last in, first out)
 - `Queues` (*FIFO* - first in, first out)
 - `Linked lists`  
 - `Trees`
@@ -149,7 +149,7 @@ Data structures are needed to store data in a suitable way
 <!-- TOC --><a name="imperative-and-declarative-programming"></a>
 ### Imperative and declarative programming
 - `Imperative style` - we describe **how** to achieve the desired result  
-- `Declarative style' - we describe ** what kind of result ** we need
+- `Declarative style` - we describe ** what kind of result ** we need
 
 ---
 <!-- TOC --><a name="stack-and-heap"></a>
@@ -169,7 +169,7 @@ Data structures are needed to store data in a suitable way
 <!-- TOC --><a name="di-and-service-locator"></a>
 ### DI and Service Locator
 - `DI` - passing class dependencies through constructor parameters
-- `Service Locator' - singleton / class with a set of static methods
+- `Service Locator` - singleton / class with a set of static methods
 
 The `Service Locator` can be accessed from anywhere in the code. This is its main disadvantage
 
@@ -184,18 +184,18 @@ The `Service Locator` can be accessed from anywhere in the code. This is its mai
 <!-- TOC --><a name="jit-and-aot"></a>
 ### JIT and AOT
 - `Just-in-time (JIT) compilation` is a type of compilation that is performed directly while the program is running, which significantly speeds up the development cycle. But it should be borne in mind that the program may slow down and run slower
-- `Ahead-of-time (AOT) compilation` is a type of compilation that is fully executed before running a program. The Dart code is converted to native machine code, which is then packaged into a binary file with the extension `.so` for `Android` or `.dylib` for `iOS'. `AOT` Takes longer than `JIT`, but as a result, the program runs much faster.
+- `Ahead-of-time (AOT) compilation` is a type of compilation that is fully executed before running a program. The Dart code is converted to native machine code, which is then packaged into a binary file with the extension `.so` for `Android` or `.dylib` for `iOS`. `AOT` Takes longer than `JIT`, but as a result, the program runs much faster.
 
 ---
 <!-- TOC --><a name="hot-restart-and-hot-reload"></a>
 ### Hot Restart and Hot Reload
 - `Hot Reload` loads the changes to the `Dart VM` and reboots the widget tree, saving the state. Does not restart `main()` and `initState()`
-- `Hot Restart` loads the changes to the `Dart VM` and restarts the entire application. Restarts `main()` and `initState()'. The state is not saved
+- `Hot Restart` loads the changes to the `Dart VM` and restarts the entire application. Restarts `main()` and `initState()`. The state is not saved
 
 ---
 <!-- TOC --><a name="hashcode"></a>
 ### HashCode
-A `hash code' is a getter for any object that returns an `int'. It is needed when saving an object to `map` or `set'. Hash codes must be the same for objects that are equal to each other according to the == operator  
+A `hash code` is a getter for any object that returns an `int`. It is needed when saving an object to `map` or `set`. Hash codes must be the same for objects that are equal to each other according to the == operator  
 `int get hashCode => Object.hash(runtimeType, ..., ...);`
 
 ---
@@ -208,14 +208,14 @@ A `hash code' is a getter for any object that returns an `int'. It is needed whe
 ### Mixin
 A `mixin` is a multiple inheritance mechanism that allows classes to use the functionality of other classes without explicit inheritance.
 
-Mixins in Dart are defined by the keyword `mixin'. They can contain methods, fields, and getters/setters, but they cannot have constructors. Instead, mixins are initialized automatically when they are applied to a class. The `with` operator is used to use mixins    
+Mixins in Dart are defined by the keyword `mixin`. They can contain methods, fields, and getters/setters, but they cannot have constructors. Instead, mixins are initialized automatically when they are applied to a class. The `with` operator is used to use mixins    
 
 If the mixins have a method with the same name, then the implementation that is specified in the last mixin will remain. Since mixins will override this method
 
 ---
 <!-- TOC --><a name="sound-null-safety"></a>
 ### Sound Null Safety
-'Sound Null Safety` is an addition to the Dart language that strengthens the type system by separating types that allow the value of `Null` from types that do not allow the value of `Null`. This allows developers to prevent errors related to `Null'.  
+`Sound Null Safety` is an addition to the Dart language that strengthens the type system by separating types that allow the value of `Null` from types that do not allow the value of `Null`. This allows developers to prevent errors related to `Null`.  
 
 ---
 <!-- TOC --><a name="type-system"></a>
@@ -230,7 +230,7 @@ With the advent of null safety in Dart, the hierarchy of classes and interfaces 
    - All existing types have been divided into non-nullable and nullable versions. For example, `int` became `int` (non-nullable) and `int?` (nullable)
 
 2. **The new root of the hierarchy is "Object?"**:
-   - Has a new root class `Object' been introduced?`, which can be null. In previous versions of Dart, the root class was `Object`
+   - Has a new root class `Object` been introduced?`, which can be null. In previous versions of Dart, the root class was `Object`
 
 3. **Changes in the error hierarchy**:
 - A new class `NullThrownError` has been introduced, which represents an error that occurs when trying to throw a `null` exception
@@ -267,7 +267,7 @@ Components:
 A zone is a mechanism that allows you to manage and handle errors and other events that occur in certain areas of the code.
 
 1. Protecting your application from termination due to an unhandled exception
-2. Association of data known as `zone-local values' with individual zones
+2. Association of data known as `zone-local values` with individual zones
 3. Redefining a limited set of methods, such as print() and scheduleMicrotask(), inside part or all of the code
 4. Perform the operation every time the code enters or exits the zone. These operations may include starting or stopping a timer or saving a stacktrace.
 
@@ -296,7 +296,7 @@ A zone is a mechanism that allows you to manage and handle errors and other even
 - TimeoutException
 - NullRejectionException
 
-'Error` is a class for errors that usually cannot be repaired, and they indicate serious problems in the program or system:
+`Error` is a class for errors that usually cannot be repaired, and they indicate serious problems in the program or system:
 - OSError
 - ArgumentError
 - IndexError
@@ -365,7 +365,7 @@ Future states:
 ### Future Constructors
 - `Future(FutureOr<T> computation())`: Creates a future object that uses the Timer.run method to run the computation function asynchronously and returns its result.
 - `FutureOr<T>`: specifies that the calculation function should return either a Future<T> object or an object of type T. For example, to get a Future<int> object, the calculation function should return either a Future<int> object or an int object
-- `Future.delayed(Duration duration, [FutureOr<T> computation()])': creates a Future object that runs after the time delay specified through the first Duration parameter. The second optional parameter indicates the function that runs after this delay.
+- `Future.delayed(Duration duration, [FutureOr<T> computation()])`: creates a Future object that runs after the time delay specified through the first Duration parameter. The second optional parameter indicates the function that runs after this delay.
 - `Future.error(Object error, [StackTrace stackTrace])`: Creates a Future object that contains information about the error that occurred.
 - `Future.microtask(FutureOr<T> computation())`: Creates a Future object that uses the scheduleMicrotask function to run the computation function asynchronously and return its result.
 - `Future.sync(FutureOr<T> computation())`: Creates a Future object that contains the result of an immediately called computation function.
@@ -398,7 +398,7 @@ The `Completer` allows you to supply a Future, send an execution event, or an er
 ### Stream
 A `stream` is a sequence of asynchronous events. Stream tells you that there is an event and when it will be ready  
 - `Single subscription` is a type of stream where there can be only one subscriber. 
-- `Broadcast` is a type of stream where there can be many subscribers. At the same time, Broadcast streams give their data regardless of whether someone is subscribed to them or not. Stream subscribers receive events only from the moment of subscription, and not from the moment of the start of the stream's life
+- `Broadcast` is a type of stream where there can be many subscribers. At the same time, Broadcast streams give their data regardless of whether someone is subscribed to them or not. Stream subscribers receive events only from the moment of subscription, and not from the moment of the start of the stream`s life
 
 --- 
 <!-- TOC --><a name="generators-sync-async"></a>
@@ -410,7 +410,7 @@ A `stream` is a sequence of asynchronous events. Stream tells you that there is 
 ---
 <!-- TOC --><a name="multithreading-in-dart-and-flutter"></a>
 ### Multithreading in Dart and Flutter 
-'Dart` is a single—threaded programming language. It executes one instruction at a time. But at the same time, we can run the code in a separate thread using `Isolate`
+`Dart` is a single—threaded programming language. It executes one instruction at a time. But at the same time, we can run the code in a separate thread using `Isolate`
 
 ---
 <!-- TOC --><a name="isolate"></a>
@@ -420,7 +420,7 @@ A `stream` is a sequence of asynchronous events. Stream tells you that there is 
 --- 
 <!-- TOC --><a name="compute"></a>
 ### Compute
-'Compute` is a function that creates an isolate and runs the passed code.
+`Compute` is a function that creates an isolate and runs the passed code.
 	
 ---
 <!-- TOC --><a name="multithreading-issues"></a>
@@ -437,7 +437,7 @@ A `stream` is a sequence of asynchronous events. Stream tells you that there is 
 <!-- TOC --><a name="stateless-and-stateful-widgets"></a>
 ### Stateless and Stateful widgets
 - `StatelessWidget` is a widget that has no state and does not change its properties during the operation of the application. They can only be changed through external events that occur in the parent widgets. 
-- `StatefulWidget` is a widget that stores the state, during the operation of the application it can change it dynamically using `setState()'. 
+- `StatefulWidget` is a widget that stores the state, during the operation of the application it can change it dynamically using `setState()`. 
 
 ---
 <!-- TOC --><a name="stateful-widget-lifecycle"></a>
@@ -445,23 +445,23 @@ A `stream` is a sequence of asynchronous events. Stream tells you that there is 
 1. `createState()` is called once and creates a changeable state for this widget at a specified location in the tree
 2.  `mounted is true`
 3. `initState()` is called once during initialization
-4. 'didChangeDependencies()` is called once after initialization and further upon notifications from the Inherited widgets at the top of the tree on which the widget depends 
+4. `didChangeDependencies()` is called once after initialization and further upon notifications from the Inherited widgets at the top of the tree on which the widget depends 
 5. `build()` is called every time you redraw
 6. `didUpdateWidget(Widget oldWidget)` is called every time the widget configuration is updated
 7. `setState()` is called imperatively for redrawing
 8. `deactivate()` is called when a previously active element is moved to the list of inactive elements, while being removed from the tree
-9. 'dispose()` is called when this object is removed from the tree **forever**
+9. `dispose()` is called when this object is removed from the tree **forever**
 10.  `mounted is false`
 
 --- 
 <!-- TOC --><a name="buildcontext"></a>
 ### BuildContext
-The `BuildContext` is the interface that implements the `Element'. 
+The `BuildContext` is the interface that implements the `Element`. 
 
 `BuildContext` can be useful when needed:
 - Get a reference to the `RenderObject` object corresponding to the widget (or, if the widget is not a Renderer, then a descendant widget)
 - Get the size of the `RenderObject`
-- Access the tree and get the nearest parent `InheritedWidget'. This is used by virtually all widgets that usually implement the of method (for example, `MediaQuery.of(context)`, `Theme.of(context)` etc.)
+- Access the tree and get the nearest parent `InheritedWidget`. This is used by virtually all widgets that usually implement the of method (for example, `MediaQuery.of(context)`, `Theme.of(context)` etc.)
 
 ---
 <!-- TOC --><a name="inheritedwidget"></a>
@@ -492,17 +492,17 @@ An `Element` is a mutable representation of a widget at a specific location in t
 ---
 <!-- TOC --><a name="renderobject"></a>
 ### RenderObject
-`RenderObject` is a mutable object of the visualization tree. It has a parent object, as well as a data field that the parent object uses to store specific information about the object itself, for example, its position. This object is responsible for rendering, accounting for sizes and constraints, listening and processing clicks. If necessary, it is marked as `dirty'. It is redrawn using its own `layer` method
+`RenderObject` is a mutable object of the visualization tree. It has a parent object, as well as a data field that the parent object uses to store specific information about the object itself, for example, its position. This object is responsible for rendering, accounting for sizes and constraints, listening and processing clicks. If necessary, it is marked as `dirty`. It is redrawn using its own `layer` method
 
 ---
 <!-- TOC --><a name="types-of-widgets"></a>
 ### Types of widgets
 `Proxies` are widgets that store some information and make it available to posterity. These widgets are not directly involved in shaping the user interface, but are used to get the information they can provide.
 - `InheritedWidget`
-- `ParentDataWidget' (`LayoutId`, `Flexible`, `KeepAlive`, etc.)
+- `ParentDataWidget` (`LayoutId`, `Flexible`, `KeepAlive`, etc.)
 - `NotificationListener`
 
-'Renderer' are widgets that are directly related to the layout of the screen, as they determine the size, position, and rendering
+`Renderer` are widgets that are directly related to the layout of the screen, as they determine the size, position, and rendering
 - `Row`
 - `Column`
 - `Stack`
@@ -526,7 +526,7 @@ A `ComponentElement` is a layout element that does not explicitly contain drawin
 - `StatelessElement`
 - `StatefulElement`
 
-`RenderObjectElement' is a display element that is explicitly involved in drawing components on the screen. Contains a `RenderObject` and inherits from the `Element` class. It is formed when creating widgets `Padding`, `Column`, `Row`, `Center`, etc.
+`RenderObjectElement` is a display element that is explicitly involved in drawing components on the screen. Contains a `RenderObject` and inherits from the `Element` class. It is formed when creating widgets `Padding`, `Column`, `Row`, `Center`, etc.
 - `LeafRenderObjectElement`
 - `ListWheelElement`
 - `MultiChildRenderObjectElement`
@@ -566,7 +566,7 @@ A `ComponentElement` is a layout element that does not explicitly contain drawin
 
 The `framework level` is everything we are working with at the time of writing the application, and all the service classes that allow us to interact with the engine level. Everything related to this level is written on Dart. The `Flutter Framework` interacts with the `Flutter Engine` through an abstraction layer called `Window`
   
-The `engine level` is a lower level than the framework level, it contains classes and libraries that allow the framework level to work. Including the `Dart virtual machine', `Skia` and so on.  
+The `engine level` is a lower level than the framework level, it contains classes and libraries that allow the framework level to work. Including the `Dart virtual machine`, `Skia` and so on.  
   
 `Platform level` — specific mechanisms related to a specific launch platform.
 
@@ -579,23 +579,23 @@ The `Flutter Engine` notifies the `Flutter Framework` when:
 ---
 <!-- TOC --><a name="execution-model-in-flutter"></a>
 ### Execution model in Flutter
-1. A new process is created and launched — `Thread (Isolate)'. This is the only process in which your application will run.
-2. Two queues with `MicroTask` and `Event` are initialized, the queue type is `FIFO' (note: first in first out, i.e. messages that arrived earlier will be processed earlier)
+1. A new process is created and launched — `Thread (Isolate)`. This is the only process in which your application will run.
+2. Two queues with `MicroTask` and `Event` are initialized, the queue type is `FIFO` (note: first in first out, i.e. messages that arrived earlier will be processed earlier)
 3. The `main()` function is executed
-4. The `Event Loop` is started. It controls the order of execution of your code, depending on the contents of two queues: `MicroTask` and `Event'. It is an "endless" cycle. 
+4. The `Event Loop` is started. It controls the order of execution of your code, depending on the contents of two queues: `MicroTask` and `Event`. It is an "endless" cycle. 
 5. The `Event Loop` checks the `MicroTask` and `Event` with a certain frequency. If there is something in the `MicroTask`, then it is executed before the `Event` queue.
 
 ---
 <!-- TOC --><a name="custompaint"></a>
 ### CustomPaint
-'CustomPaint` is a class that creates a "canvas" for drawing. The `paint` method uses `canvas` as arguments, which allows you to draw various shapes
+`CustomPaint` is a class that creates a "canvas" for drawing. The `paint` method uses `canvas` as arguments, which allows you to draw various shapes
 
 ---
 <!-- TOC --><a name="widgetsflutterbinding"></a>
 ### WidgetsFlutterBinding
-`WidgetsFlutterBinding' is a specific implementation of application binding based on the widget infrastructure. In essence, it is the glue connecting the framework and the Flutter engine. The `WidgetsFlutterBinding` consists of many links: `GestureBinding`, `ServicesBinding`, `SchedulerBinding`, `PaintingBinding`, `SemanticsBinding`, `RendererBinding`, `WidgetsBinding`.
+`WidgetsFlutterBinding` is a specific implementation of application binding based on the widget infrastructure. In essence, it is the glue connecting the framework and the Flutter engine. The `WidgetsFlutterBinding` consists of many links: `GestureBinding`, `ServicesBinding`, `SchedulerBinding`, `PaintingBinding`, `SemanticsBinding`, `RendererBinding`, `WidgetsBinding`.
 
-The `scheduleAttachRootWidget` method is a deferred implementation of `attachRootWidget`. This method belongs to `WidgetsBinding'. The description says that it attaches the passed widget to the `renderViewElement' — the root element of the element tree.
+The `scheduleAttachRootWidget` method is a deferred implementation of `attachRootWidget`. This method belongs to `WidgetsBinding`. The description says that it attaches the passed widget to the `renderViewElement` — the root element of the element tree.
 
 The `scheduleWarmUpFrame` method belongs to `SchedulerBinding` and is used to schedule the frame to start as soon as possible without waiting for the `Vsync` system signal.
 
@@ -604,11 +604,11 @@ The `scheduleWarmUpFrame` method belongs to `SchedulerBinding` and is used to sc
 ### Bindings
 ![image](https://user-images.githubusercontent.com/80569772/203303949-aadb037a-c818-4f63-8ad8-67c3812a96ad.png)
 
-`Bindings' are classes for exchanging data between the `Flutter Framework` and the `Flutter Engine'. Each binding is responsible for processing a set of specific tasks, actions, and events grouped by activity area.
+`Bindings` are classes for exchanging data between the `Flutter Framework` and the `Flutter Engine`. Each binding is responsible for processing a set of specific tasks, actions, and events grouped by activity area.
 
-`BaseBinding` is a basic abstract class, then let's look at specific implementations of bindings. Among them we will see:  
+`BaseBinding` is a basic abstract class, then let`s look at specific implementations of bindings. Among them we will see:  
   
-`ServicesBinding` is responsible for redirecting messages from the current platform to the message data handler (`BinaryMessenger');  
+`ServicesBinding` is responsible for redirecting messages from the current platform to the message data handler (`BinaryMessenger`);  
   
 `PaintingBinding` is responsible for linking to the rendering library.  
   
@@ -616,7 +616,7 @@ The `scheduleWarmUpFrame` method belongs to `SchedulerBinding` and is used to sc
   
 `WidgetBinding` is responsible for the connection between the widget tree and the Flutter engine.  
   
-`SchedulerBinding' — scheduler for the next tasks, such as:  
+`SchedulerBinding` — scheduler for the next tasks, such as:  
 - calls of incoming callbacks that the system initiates in `Window.onBeginFrame` — for example, ticker events and animation controllers;
 - calls of continuous callbacks initiated by the `Window.onDrawFrame` system, for example, events for updating the display system after incoming callbacks have worked out;
 - post-frame callbacks that are called after continuous callbacks, before returning from `Window.onDrawFrame`;
@@ -635,24 +635,24 @@ The `scheduleWarmUpFrame` method belongs to `SchedulerBinding` and is used to sc
 
 The `platform channel` is a two—way communication channel between the dart code and the native, which combines the channel name and codec to encode messages into binary form and back. The calls are asynchronous. Each channel must have a unique identifier.  
 	
-`Message channels' are platform channels designed for messaging between native code and a flutter application.  
+`Message channels` are platform channels designed for messaging between native code and a flutter application.  
 `Message codecs`:
 - `BinaryCodec` By implementing identifier mapping in byte buffers, this codec allows you to enjoy the convenience of channel objects in cases where you do not need encoding/decoding. Dart message channels with this codec are of the BasicMessageChannel<ByteData> type.
 - `JSONMessageCodec` Works with "JSON-like" values (strings, numbers, boolean values, null, lists of these values and key string maps with this data). Lists and maps are heterogeneous and can be nested inside each other. During encoding, the values are converted to JSON strings and then to bytes using UTF-8. Dart message channels are of the BasicMessageChannel<dynamic> type with this codec.
 - `StandardMessageCodec` Works with slightly more generalized values than the JSON codec, also supporting homogeneous data buffers (Uint8List, Int32List, Int64List, Float64List) and maps with non-string keys. Number processing differs from JSON in that Dart integers arrive on the platform as 32- or 64-bit signed integers, depending on the value never as floating-point numbers. The values are encoded in a special, fairly compact and extensible binary format. The standard codec is intended to be the default choice for the communication channel in Flutter. As for JSON, Dart message channels created using the standard codec are of the BasicMessageChannel<dynamic> type.  
 	
-`Method channels' are platform channels designed to call native code from a flutter application.    
+`Method channels` are platform channels designed to call native code from a flutter application.    
 `Method codecs`:
-- `StandardMethodCodec` delegates encoding of payload values to `StandardMessageCodec'. Since the latter is extensible, the same can be said about the former.
-- `JSONMethodCodec` delegates encoding of payload values to 'JSONMessageCodec'.  
+- `StandardMethodCodec` delegates encoding of payload values to `StandardMessageCodec`. Since the latter is extensible, the same can be said about the former.
+- `JSONMethodCodec` delegates encoding of payload values to `JSONMessageCodec`.  
 	
-`Event channels' are specialized platform channels designed to be used in the case of representing Flutter platform events as a Dart stream. It works like a regular `Stream`
+`Event channels` are specialized platform channels designed to be used in the case of representing Flutter platform events as a Dart stream. It works like a regular `Stream`
 
 ---
 <!-- TOC --><a name="build-modes"></a>
 ### Build Modes
 - `Debug` (`JIT`) for development
-- `Release' (`AOT`) to publish the application
+- `Release` (`AOT`) to publish the application
 - `Profile` (`AOT`) for performance analysis
 
 ---
@@ -690,8 +690,8 @@ A `Tween` is an object that describes between which values the widget is animate
 ---
 <!-- TOC --><a name="tween-animations"></a>
 ### Tween animations
-- `Implicit Animations` is a set of `Implicitly Animated Widgets` that animate themselves when they are rebuilt with new arguments. (`AnimatedAlign`, `AnimatedContainer', `AnimatedPadding`, etc.)
-- `Explicit Animations' is a set of animation effects controls. They provide much more control over animation than `Implicit Animations'. To use it, you need to mix `SingleTickerProviderStateMixin` / `TickerProviderStateMixin` to the state of your widget, create an `AnimationController` and `Animation` depending on it, pass the animation to the `Transition Widget` (`AlignTransition`, `DecoratedBoxTransition`, `SizeTransition`, etc.)
+- `Implicit Animations` is a set of `Implicitly Animated Widgets` that animate themselves when they are rebuilt with new arguments. (`AnimatedAlign`, `AnimatedContainer`, `AnimatedPadding`, etc.)
+- `Explicit Animations` is a set of animation effects controls. They provide much more control over animation than `Implicit Animations`. To use it, you need to mix `SingleTickerProviderStateMixin` / `TickerProviderStateMixin` to the state of your widget, create an `AnimationController` and `Animation` depending on it, pass the animation to the `Transition Widget` (`AlignTransition`, `DecoratedBoxTransition`, `SizeTransition`, etc.)
 `SingleTickerProviderStateMixin` / `TickerProviderStateMixin` creates ` Ticker`  
 `Ticker` calls a callback for each animation frame  
 `AnimationController` calculates all animation frames - controls animation (forward, reverse, repeat, stop, reset, etc.)
@@ -703,12 +703,12 @@ A `Tween` is an object that describes between which values the widget is animate
 1. Some external events lead to the need to update the display. 
 2. The `Schedule Frame` is sent to the `Flutter Engine` 
 3. When the `Flutter Engine` is ready to start updating the rendering, it creates a `Begin Frame` request
-4. This `Begin Frame` request is intercepted by the `Flutter Framework`, which performs tasks related mainly to `Tickers' (for example, animation)
+4. This `Begin Frame` request is intercepted by the `Flutter Framework`, which performs tasks related mainly to `Tickers` (for example, animation)
 5. These tasks may re-create the request for later rendering (example: the animation has not finished its execution, and it will need to get another `Begin Frame` at a later stage to complete it)
 6. Next, the `Flutter Engine` sends a `Draw Frame`, which is intercepted by the `Flutter Framework`, which will look for any tasks related to updating the layout in terms of structure and size
 7. After all these tasks are completed, he moves on to tasks related to updating the layout in terms of rendering
 8. If there is something on the screen that needs to be drawn, then a new scene for visualization is sent to the `Flutter Engine`, which will update the screen
-9. Then the `Flutter Framework` performs all the tasks that will be performed after the rendering is completed (`PostFrame callbacks'), and any other subsequent tasks that are not related to rendering
+9. Then the `Flutter Framework` performs all the tasks that will be performed after the rendering is completed (`PostFrame callbacks`), and any other subsequent tasks that are not related to rendering
 10. …
 
 ---
@@ -732,7 +732,7 @@ Methods:
 ---
 <!-- TOC --><a name="pipelineowner"></a>
 ### PipelineOwner
-`PipelineOwner' is an assembly manager that works with the display tree.
+`PipelineOwner` is an assembly manager that works with the display tree.
 
 ---
 <!-- TOC --><a name="garbage-collector"></a>
@@ -757,7 +757,7 @@ The amount of memory used can be divided into two spaces: active and inactive. N
 <!-- TOC --><a name="task-runners"></a>
 ### Task Runners
 ![image](https://user-images.githubusercontent.com/80569772/211004726-1eeef86f-cebf-41de-8bb3-a8485257565f.png)  
-- `Platform Task Runner': The main flow of the platform. The plugin code is executed here. For more information, see the UIKit documentation for iOS or the MainThread documentation for Android. This thread is not displayed in the performance overlay.
+- `Platform Task Runner`: The main flow of the platform. The plugin code is executed here. For more information, see the UIKit documentation for iOS or the MainThread documentation for Android. This thread is not displayed in the performance overlay.
 - `UI Task Runner`: The UI thread executes the Dart code in the Dart VM. This stream includes code written by you and code executed by the Flutter framework on behalf of your application. When your application creates and displays a scene, the UI thread creates a layer tree, a lightweight object containing device-independent drawing commands, and sends the layer tree to the raster stream for display on the device. Do not block this stream! Shown in the bottom row of the performance overlay.
 - `Raster Task Runner`: The raster stream receives the layer tree and displays it by accessing the GPU (GPU). You cannot directly access the raster stream or its data, but if this stream is slow, then this is the result of what you did in the Dart code. The graphics libraries Skia and Impeller work in this stream. They are shown in the top row of the performance overlay. Previously, this stream was known as the "GPU stream" because it performs rasterization for the GPU. However, it is executed on the central processor. We renamed it the "raster stream" because many developers mistakenly (but quite reasonably) believed that this stream runs on the GPU.
 - `IO Task Runner`: Performs expensive tasks (mainly I/O) that would otherwise block the operation of UI threads or raster threads. This stream is not displayed in the performance overlay.
@@ -1017,13 +1017,13 @@ Pure architecture is an architecture that follows `SOLID` and is divided into th
 <!-- TOC --><a name="types-of-tests"></a>
 ### Types of tests
 - A `unit test` tests a single function, method, or class. Its purpose is to check the correctness of a certain function, method, or class. External dependencies for the module under test are usually passed as a parameter.
-- `Widget test` tests one widget. The purpose of such a test is to make sure that the widget's user interface looks and interacts as planned. Widget testing takes place in a test environment that provides the context of the widget's lifecycle. Also, the widget under test should be able to receive user actions and events and respond to them. 
+- `Widget test` tests one widget. The purpose of such a test is to make sure that the widget`s user interface looks and interacts as planned. Widget testing takes place in a test environment that provides the context of the widget`s lifecycle. Also, the widget under test should be able to receive user actions and events and respond to them. 
 - The `integration test` tests the entire application or most of it. The purpose of the integration test is to make sure that all tested widgets and services work together as expected. In addition, you can use integration tests to check the performance of your application. As a rule, the integration test is performed on a real device or emulator.
 
 ---
 <!-- TOC --><a name="tdd"></a>
 ### TDD
-'TDD` is an application development technique in which first a test is written covering the desired change, and then the code that will allow the test to pass.
+`TDD` is an application development technique in which first a test is written covering the desired change, and then the code that will allow the test to pass.
 
 <!-- TOC --><a name="development-patterns"></a>
 ## Development patterns
